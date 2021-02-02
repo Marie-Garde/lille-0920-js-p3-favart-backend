@@ -4,6 +4,10 @@ const { db } = require("../conf");
 
 //Display and modify clientbase
 
+router.get("/", (req, res) => {
+    res.status(200).send("Hello there");
+});
+
 //Get all clients
 router.get("/client", (req, res) => {
     db.query("SELECT * from Client", (err, results) => {
